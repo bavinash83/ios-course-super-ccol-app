@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ex2HideBombs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="Bluebombicon" translatesAutoresizingMaskIntoConstraints="NO" id="Kzf-Nt-g3D">
+                                <rect key="frame" x="20" y="28" width="143" height="161"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="Redbombicon" translatesAutoresizingMaskIntoConstraints="NO" id="RCp-1l-wUf">
+                                <rect key="frame" x="196" y="47" width="148" height="142"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhH-gR-aa2">
+                                <rect key="frame" x="112" y="350" width="151" height="46"/>
+                                <state key="normal" title="Hide Red Icon">
+                                    <color key="titleColor" red="1" green="0.10491701440535306" blue="0.094590021317636608" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="hideRedBombIcon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ucR-5o-btG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOe-WS-G4y">
+                                <rect key="frame" x="164" y="425" width="46" height="30"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="unhideBombs:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wpW-jM-1Se"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFY-bI-S2k">
+                                <rect key="frame" x="116" y="319" width="142" height="30"/>
+                                <state key="normal" title="Hide Blue Icon"/>
+                                <connections>
+                                    <action selector="hideBlueBombIcon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tnE-Lq-u7z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="Bluebombicon" destination="Kzf-Nt-g3D" id="1fd-cH-ieI"/>
+                        <outlet property="HideBlueBombButton" destination="PFY-bI-S2k" id="Zdg-Gv-nuL"/>
+                        <outlet property="HideRedBombButton" destination="rhH-gR-aa2" id="F7b-1I-5hG"/>
+                        <outlet property="Redbombicon" destination="RCp-1l-wUf" id="90J-Nv-GjU"/>
+                        <outlet property="ResetButton" destination="TOe-WS-G4y" id="8pK-2o-SjF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="312"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Bluebombicon" width="568" height="748"/>
+        <image name="Redbombicon" width="954" height="782"/>
+    </resources>
+</document>
